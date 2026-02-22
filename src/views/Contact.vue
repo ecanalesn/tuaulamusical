@@ -90,7 +90,6 @@
                 <select id="subject" name="subject" v-model="form.subject" required>
                   <option value="">Selecciona un asunto</option>
                   <option value="clases">Información sobre las clases</option>
-                  <option value="cursos">Información sobre los cursos online</option>
                   <option value="precios">Precios y horarios</option>
                   <option value="matricula">Matrícula</option>
                 </select>
