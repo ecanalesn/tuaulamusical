@@ -49,7 +49,7 @@
 
           <div class="contact-form">
             <h2>Envíame un Mensaje</h2>
-            <form name="contact" method="POST" data-netlify="true" @submit.prevent="submitForm">
+            <form name="contact" method="POST" netlify data-netlify="true" @submit.prevent="submitForm">
               <div class="form-group">
                 <label for="name">Nombre *</label>
                 <input 
@@ -116,15 +116,29 @@
         </div>
       </div>
     </section>
+    
+    <Modal 
+      :isVisible="showModal" 
+      title="Mensaje enviado" 
+      :message="modalMessage" 
+      @close="showModal = false" 
+    />
   </div>
 </template>
 
 <script>
+import Modal from '@/components/Modal.vue'
+
 export default {
   name: 'Contact',
+  components: {
+    Modal
+  },
   data() {
     return {
       isSubmitting: false,
+      showModal: false,
+      modalMessage: '',
       form: {
         name: '',
         email: '',
@@ -155,7 +169,8 @@ export default {
           body: new URLSearchParams(formData).toString()
         })
         
-        alert('¡Mensaje enviado con éxito! En breve me pondré en contacto contigo')
+        this.modalMessage = '¡Gracias! En breve me pondré en contacto contigo'
+        this.showModal = true
         
         // Reset form
         this.form = {
@@ -167,7 +182,8 @@ export default {
         }
       } catch (error) {
         console.error('Error:', error)
-        alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.')
+        this.modalMessage = 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.'
+        this.showModal = true
       } finally {
         this.isSubmitting = false
       }

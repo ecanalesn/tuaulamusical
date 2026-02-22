@@ -42,7 +42,7 @@ export default {
     },
     openWhatsApp() {
       const phoneNumber = '34616471534'
-      const message = 'Hola, me interesa conocer más sobre las clases de música.'
+      const message = 'Hola Estefanía, me gustaría obtener más información sobre las clases de música.'
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
       window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
     }

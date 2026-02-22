@@ -9,7 +9,8 @@
     <section class="content-section">
       <div class="container">
         <div class="enrollment-form-container">
-          <form class="enrollment-form" name="enrollment" method="POST" data-netlify="true" @submit.prevent="submitForm">
+          <form class="enrollment-form" name="enrollment" method="POST" netlify data-netlify="true" @submit.prevent="submitForm">
+            <input type="hidden" name="form-name" value="enrollment" />
             <div class="form-section">
               <label for="email">Correo *</label>
               <input 
@@ -187,14 +188,29 @@
         </div>
       </div>
     </section>
+    
+    <Modal 
+      :isVisible="showModal" 
+      title="Matrícula enviada" 
+      :message="modalMessage" 
+      @close="showModal = false" 
+    />
   </div>
 </template>
 
 <script>
+import Modal from '@/components/Modal.vue'
+
 export default {
   name: 'Enrollment',
+  components: {
+    Modal
+  },
   data() {
     return {
+      isSubmitting: false,
+      showModal: false,
+      modalMessage: '',
       form: {
         email: '',
         studentName: '',
@@ -209,10 +225,51 @@ export default {
     }
   },
   methods: {
-    submitForm() {
-      // Here the form submission would be processed
-      console.log('Form submitted:', this.form)
-      alert('¡Matrícula enviada correctamente! En breve me pondré en contacto contigo.')
+    async submitForm() {
+      this.isSubmitting = true
+      
+      try {
+        // Create FormData for Netlify Forms
+        const formData = new FormData()
+        formData.append('form-name', 'enrollment')
+        formData.append('email', this.form.email)
+        formData.append('studentName', this.form.studentName)
+        formData.append('parentName', this.form.parentName)
+        formData.append('age', this.form.age)
+        formData.append('selectedClass', this.form.selectedClass)
+        formData.append('selectedPlan', this.form.selectedPlan)
+        formData.append('selectedSchedule', this.form.selectedSchedule)
+        formData.append('startDate', this.form.startDate)
+        
+        // Submit to Netlify Forms
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString()
+        })
+        
+        this.modalMessage = 'Tu solicitud ha sido registrada. En breve me pondré en contacto contigo.'
+        this.showModal = true
+        
+        // Reset form
+        this.form = {
+          email: '',
+          studentName: '',
+          parentName: '',
+          age: '',
+          selectedClass: '',
+          selectedPlan: '',
+          selectedSchedule: '',
+          customSchedule: '',
+          startDate: ''
+        }
+      } catch (error) {
+        console.error('Error:', error)
+        this.modalMessage = 'Error al enviar la matrícula. Por favor, inténtalo de nuevo.'
+        this.showModal = true
+      } finally {
+        this.isSubmitting = false
+      }
     }
   }
 }
