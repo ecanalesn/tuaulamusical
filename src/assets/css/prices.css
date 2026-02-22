@@ -1,0 +1,23 @@
+/* Prices Page Styles */
+
+.prices-page {
+    min-height: 100vh;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pricing-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(54, 204, 202, 0.1) 0%, rgba(43, 181, 179, 0.05) 100%);
+}
+
+@media (max-width: 768px) {
+    .prices-page .hero-banner h1 {
+        font-size: 2rem;
+    }
+}

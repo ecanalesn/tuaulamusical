@@ -1,0 +1,170 @@
+/* Pricing Section Styles - Shared between Home and Prices */
+.pricing-section {
+  padding: 30px 0 80px 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 45px 35px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card:hover::before {
+  opacity: 1;
+}
+
+.pricing-card.featured {
+  transform: scale(1.05);
+  box-shadow: 0 20px 45px rgba(54, 204, 202, 0.3);
+}
+
+.pricing-card.featured::before {
+  opacity: 1;
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-15px) scale(1.08);
+  box-shadow: 0 30px 60px rgba(54, 204, 202, 0.4);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  background: var(--primary-turquoise);
+  color: white;
+  padding: 6px 25px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 8px rgba(54, 204, 202, 0.4);
+}
+
+.card-title {
+  font-size: 32px;
+  color: var(--primary-turquoise);
+  margin-bottom: 20px;
+  font-family: 'Righteous', cursive;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-price {
+  margin-bottom: 30px;
+}
+
+.price-amount {
+  font-size: 48px;
+  color: #000;
+  font-weight: 200;
+  font-family: 'Righteous', cursive;
+  display: block;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-card:hover .price-amount {
+  transform: scale(1.05);
+}
+
+.price-hours {
+  font-size: 18px;
+  color: #666;
+  margin-top: 2px;
+  display: block;
+  font-weight: 600;
+}
+
+.card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.card-features li {
+  padding: 12px 0;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.card-features i {
+  color: var(--primary-turquoise);
+  margin-right: 12px;
+  font-size: 16px;
+  width: 20px;
+}
+
+.card-button {
+  margin-top: 20px;
+}
+
+.card-button a {
+  display: inline-block;
+  background: var(--primary-turquoise);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(54, 204, 202, 0.3);
+}
+
+.card-button a:hover {
+  background: var(--light-turquoise);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: #333;
+}

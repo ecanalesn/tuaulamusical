@@ -1,0 +1,140 @@
+/* Virtual Classroom Page Styles */
+
+.virtual-classroom-page {
+  padding-top: 0;
+  min-height: 100vh;
+}
+
+.content-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.virtual-classroom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.classroom-info h1 {
+  font-size: 32px;
+  color: var(--primary-turquoise);
+  margin-bottom: 15px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  text-align: center;
+}
+
+.classroom-info h2 {
+  font-size: 24px;
+  color: var(--primary-turquoise);
+  margin-bottom: 20px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  text-align: center;
+}
+
+.classroom-info>p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+
+.access-options {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 30px auto;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.access-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px 25px 30px 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.access-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-turquoise);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--primary-turquoise);
+  margin-bottom: 20px;
+}
+
+.access-card h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+}
+
+.access-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.btn-access {
+  display: inline-block;
+  background: var(--primary-turquoise);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: 'Work Sans', sans-serif;
+  box-shadow: 0 8px 20px rgba(54, 204, 202, 0.3);
+}
+
+.btn-access:hover {
+  background: var(--light-turquoise);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  color: #333;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .access-options {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .access-card {
+    padding: 20px 15px;
+  }
+
+  .classroom-info h1 {
+    font-size: 28px;
+  }
+
+  .classroom-info h2 {
+    font-size: 20px;
+  }
+}

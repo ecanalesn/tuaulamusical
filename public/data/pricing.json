@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Adagio",
+    "price": 60,
+    "period": "4 horas/mensuales",
+    "featured": false,
+    "features": [
+      "Canto, piano o lenguaje musical",
+      "Todas las edades",
+      "Una clase individual/semana",
+      "Libros propios",
+      "Acceso a la plataforma 24/7",
+      "Matrícula 10€"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Moderato",
+    "price": 65,
+    "period": "4 horas/mensuales",
+    "featured": true,
+    "features": [
+      "Música y movimiento",
+      "Niños de 4 a 12 años",
+      "Una clase individual/semana",
+      "Libros propios",
+      "Acceso a la plataforma 24/7",
+      "Matrícula 10€"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Allegro",
+    "price": 90,
+    "period": "6 horas/mensuales",
+    "featured": false,
+    "features": [
+      "Pruebas Conservatorio",
+      "Niños de 8 a 16 años",
+      "Una clase individual/semana",
+      "Libros propios",
+      "Acceso a la plataforma 24/7",
+      "Matrícula 30€"
+    ]
+  }
+]

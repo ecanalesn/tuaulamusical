@@ -1,0 +1,314 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+html {
+  background: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.6;
+  color: #8B4513;
+  font-size: 18px;
+  font-weight: 400;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 100vh;
+}
+
+/* Font Faces */
+@font-face {
+  font-family: 'MusiSync';
+  src: url('data:application/font-woff;charset=utf-8;base64,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') format('woff');
+}
+
+/* Typography - Portfolio Style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+p,
+span,
+div,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #2C3E50;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.3;
+  color: var(--primary-turquoise);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #2C3E50;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #2C3E50;
+}
+
+h5,
+h6 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #2C3E50;
+}
+
+p,
+span,
+div,
+li,
+a {
+  font-weight: 400;
+  line-height: 1.6;
+  color: #2C3E50;
+}
+
+.hero-page h1,
+.section-heading h2 {
+  font-weight: 700;
+  color: var(--primary-turquoise);
+}
+
+/* Color Variables - Turquoise Theme */
+:root {
+  --primary-turquoise: #36ccca;
+  /* Turquesa principal */
+  --secondary-turquoise: #2bb5b3;
+  /* Turquesa medio */
+  --light-turquoise: #d9f6f5;
+  /* Turquesa muy claro */
+  --dark-turquoise: #1a9b99;
+  /* Turquesa oscuro */
+  --accent-yellow: #FFC107;
+  --accent-green: #4CAF50;
+  --accent-purple: #9C27B0;
+  --light-yellow: #FFF8E1;
+  --light-green: #E8F5E8;
+  --light-purple: #F3E5F5;
+  --dark-text: #2C3E50;
+  --light-text: #7F8C8D;
+  --background-light: #F8F9FA;
+  --background-white: #FFFFFF;
+  --border-light: #E0E0E0;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.clr {
+  clear: both;
+}
+
+/* Music Icon Font */
+.icon-music {
+  font-family: 'MusiSync';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* WOW.js Animation Classes */
+.wow {
+  visibility: visible !important;
+  animation: none !important;
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.fadeInRight {
+  animation: fadeInRight 0.8s ease-out;
+}

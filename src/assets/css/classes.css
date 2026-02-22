@@ -1,0 +1,466 @@
+/* Course Pages Shared Styles */
+/* Used by: MusicMovement, Piano, Singing, MusicalLanguage, ConservatoryTests */
+
+.page-content,
+.prices-page,
+.courses-page,
+.virtual-classroom-page {
+  padding-top: 0;
+  min-height: 100vh;
+}
+
+.hero-section {
+  position: relative;
+  padding: 0;
+  background: white;
+  margin-top: 0;
+}
+
+
+.hero-banner {
+  background: linear-gradient(135deg, var(--primary-turquoise) 0%, var(--secondary-turquoise) 100%);
+  padding: 15px 0;
+  padding-top: 170px;
+  /* Desktop: clear fixed header + internal top padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+}
+
+.hero-banner h1 {
+  font-size: 2.5rem !important;
+  font-family: 'Righteous', cursive !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+  color: #ffffff !important;
+  transform: translateY(0px);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
+  color: #ffffff;
+  transform: translateY(12px);
+}
+
+.content-section {
+  padding: 40px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.text-content h2 {
+  font-size: 32px;
+  color: var(--primary-turquoise);
+  margin-bottom: 20px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+}
+
+.text-content h3 {
+  font-size: 24px;
+  color: var(--primary-turquoise);
+  margin: 30px 0 15px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+}
+
+.text-content h4 {
+  font-size: 20px;
+  color: var(--primary-turquoise);
+  margin: 25px 0 15px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+}
+
+.text-content p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #666;
+  text-align: justify;
+}
+
+.text-content ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.text-content li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 25px;
+  color: #666;
+  text-align: justify;
+}
+
+.text-content li::before {
+  content: '♪';
+  position: absolute;
+  left: 0;
+  color: var(--primary-turquoise);
+  font-weight: bold;
+}
+
+.inline-link {
+  color: var(--primary-turquoise);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.inline-link:hover {
+  color: var(--secondary-turquoise);
+  text-decoration: underline;
+}
+
+/* Info Circles */
+.info-circles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+  margin-top: -60px;
+}
+
+.info-circle {
+  text-align: center;
+  padding: 20px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.info-circle:hover {
+  transform: none;
+}
+
+.circle-icon {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 32px;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.circle-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.info-circle:nth-child(1) .circle-icon {
+  background: #f7dc6f;
+}
+
+.info-circle:nth-child(1) .circle-text {
+  color: white;
+}
+
+.info-circle:nth-child(2) .circle-icon {
+  background: #bb8fce;
+}
+
+.info-circle:nth-child(2) .circle-text {
+  color: white;
+}
+
+.info-circle:nth-child(3) .circle-icon {
+  background: #f8c471;
+}
+
+.info-circle:nth-child(3) .circle-text {
+  color: white;
+}
+
+.info-circle h4 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+}
+
+.info-circle p {
+  font-size: 18px;
+  color: #7f8c8d;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Enrollment Banner */
+.enrollment-banner {
+  background: #d9f6f5;
+  padding: 40px 0;
+  margin: 60px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.enrollment-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="music-pattern" patternUnits="userSpaceOnUse" width="30" height="30"><circle cx="15" cy="15" r="2" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23music-pattern)"/></svg>');
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-text h3 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-enroll {
+  background: var(--primary-turquoise);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-family: 'Work Sans', sans-serif;
+  cursor: pointer;
+}
+
+.btn-enroll:hover {
+  background: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: var(--primary-turquoise);
+}
+
+.btn-enroll:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Formats Section */
+.formats-section {
+  padding: 60px 0;
+  background: white;
+  margin: -40px -20px 0 -20px;
+  width: calc(100% + 40px);
+}
+
+.section-heading {
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: 33px;
+  color: var(--primary-turquoise);
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.formats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.format-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: none;
+  border: 2px solid var(--primary-turquoise);
+}
+
+.format-card:hover {
+  transform: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-turquoise);
+}
+
+.format-card h3 {
+  font-size: 24px;
+  color: var(--primary-turquoise);
+  margin-bottom: 20px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+}
+
+.format-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .hero-banner {
+    padding-top: 140px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .hero-banner h1 {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .page-content,
+  .prices-page,
+  .courses-page,
+  .virtual-classroom-page {
+    padding-top: 0;
+  }
+
+  .hero-banner {
+    padding-top: 120px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .hero-banner h1 {
+    font-size: 2rem !important;
+    color: #ffffff !important;
+  }
+
+  .content-section {
+    padding: 30px 0;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .text-content h2 {
+    font-size: 24px;
+  }
+
+  .text-content h3 {
+    font-size: 20px;
+  }
+
+  .text-content h4 {
+    font-size: 18px;
+  }
+
+  .info-circles {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .circle-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .circle-text {
+    font-size: 16px;
+  }
+
+  .info-circle h4 {
+    font-size: 16px;
+  }
+
+  .info-circle p {
+    font-size: 14px;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .banner-text h3 {
+    font-size: 20px;
+  }
+
+  .btn-enroll {
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 29px;
+  }
+
+  .formats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .format-card {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-banner {
+    padding-top: 50px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem !important;
+  }
+}

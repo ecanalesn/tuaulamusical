@@ -1,0 +1,29 @@
+{
+  "name": "Tu Aula Musical - Academia de Música en Córdoba",
+  "short_name": "Tu Aula Musical",
+  "description": "Academia de música en Córdoba especializada en clases particulares de piano, canto, lenguaje musical y preparación para conservatorio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#25D366",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "music", "entertainment"],
+  "lang": "es",
+  "dir": "ltr"
+}
+
+

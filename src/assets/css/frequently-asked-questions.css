@@ -1,0 +1,144 @@
+/* Frequently Asked Questions Page Styles */
+
+.page-content {
+  padding-top: 0;
+  min-height: 100vh;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.content-section {
+  padding: 80px 0;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  padding: 25px;
+  background: linear-gradient(135deg, var(--light-turquoise), #f0f9f9);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(54, 204, 202, 0.1);
+}
+
+.faq-question:hover {
+  background: linear-gradient(135deg, var(--primary-turquoise), var(--secondary-turquoise));
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(54, 204, 202, 0.3);
+}
+
+.faq-question:active {
+  transform: scale(0.98);
+  background: linear-gradient(135deg, var(--secondary-turquoise), var(--primary-turquoise));
+  transition: all 0.1s ease;
+}
+
+.faq-question h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  font-weight: normal;
+}
+
+.faq-question:hover h3 {
+  color: white;
+}
+
+.faq-question:active h3 {
+  color: white;
+}
+
+.faq-question:active i {
+  color: white;
+}
+
+.faq-question i {
+  color: var(--primary-turquoise);
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.faq-question i.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer.open {
+  max-height: 300px;
+}
+
+.faq-answer-content {
+  padding: 25px;
+  background: white;
+}
+
+.faq-answer-content p {
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+  text-align: justify;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .page-content {
+    padding-top: 60px;
+  }
+
+  .hero-page {
+    padding: 50px 0;
+  }
+
+  .hero-page h1 {
+    font-size: 32px;
+  }
+
+  .hero-page p {
+    font-size: 16px;
+  }
+
+  .content-section {
+    padding: 50px 0;
+  }
+
+  .faq-question {
+    padding: 20px;
+  }
+
+  .faq-question h3 {
+    font-size: 16px;
+  }
+
+  .faq-answer-content {
+    padding: 20px;
+  }
+}
