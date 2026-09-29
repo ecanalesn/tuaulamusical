@@ -71,7 +71,7 @@
                   name="email"
                   v-model="form.email" 
                   required
-                  placeholder="tu@email.com"
+                  placeholder="Tu dirección de correo electrónico"
                 >
               </div>
               
