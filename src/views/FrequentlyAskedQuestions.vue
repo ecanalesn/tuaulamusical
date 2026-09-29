@@ -87,7 +87,10 @@ export default {
   },
   mounted() {
     // FAQPage solo en esta página y generado desde `faqs`, para que lo que lee
-    // Google coincida siempre con lo que se muestra
+    // Google coincida siempre con lo que se muestra. Si ya viene en el HTML
+    // prerenderizado, se sustituye en vez de duplicarlo.
+    const previous = document.getElementById('faq-schema')
+    if (previous) previous.remove()
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.id = 'faq-schema'

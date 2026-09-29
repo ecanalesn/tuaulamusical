@@ -2,7 +2,7 @@
   <div class="page-content">
     <section class="hero-section">
       <div class="hero-banner">
-        <h1>Pruebas Conservatorio</h1>
+        <h1>Pruebas de acceso al Conservatorio</h1>
       </div>
     </section>
 
@@ -14,7 +14,7 @@
           class="content-grid"
         >
           <div class="text-content">
-            <h2>Preparación de las pruebas de acceso al Conservatorio</h2>
+            <h2>Preparación a las pruebas de acceso al Conservatorio Profesional de Música</h2>
 
             <h3>Enseñanzas Básicas</h3>
             <p>
@@ -87,9 +87,9 @@
           class="content-grid"
         >
           <div class="text-content">
-            <h2>Pruebas de acceso a Enseñanzas Superiores de Música</h2>
+            <h2>Preparación a las pruebas de acceso al Conservatorio Superior de Música</h2>
             <p>Se recomienda haber cursado previamente Enseñanzas Profesionales, al menos hasta 4.º curso, para contar con una base de Piano y conocimientos asentados de Lenguaje Musical.</p>
-            <p>Si todavía no has cursado las <router-link class="inline-link" to="/pruebas-conservatorio?nivel=basicas">Enseñanzas Profesionales</router-link>, te recomiendo preparar primero esas pruebas de acceso; las preparo en Canto y en Piano.</p>
+            <p>Si todavía no has cursado las <router-link class="inline-link" to="/pruebas-acceso-conservatorio-profesional">Enseñanzas Profesionales</router-link>, te recomiendo preparar primero esas pruebas de acceso; las preparo en Canto y en Piano.</p>
 
             <h3>Preparación de Piano</h3>
             <p>Trabajamos análisis, lectura a primera vista e interpretación de las obras de Piano que marque la convocatoria. Como el programa y el formato pueden cambiar cada curso, revisamos siempre las bases vigentes.</p>
@@ -172,13 +172,15 @@ export default {
   },
   data() {
     return {
-      activeLevel: this.$route.query.nivel === 'superiores' ? 'superior' : 'basicProfessional',
+      activeLevel: this.$route.meta.level,
       enrollmentYear: this.getEnrollmentYear()
     }
   },
   watch: {
-    '$route.query.nivel'(level) {
-      this.activeLevel = level === 'superiores' ? 'superior' : 'basicProfessional'
+    // Al pasar de una ruta a la otra Vue reutiliza la vista, así que hay que actualizar el nivel
+    '$route.meta.level'(level) {
+      if (!level) return
+      this.activeLevel = level
       this.updatePageMeta()
     }
   },

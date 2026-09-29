@@ -19,7 +19,7 @@
 - **Integración con Netlify Forms** para el procesamiento de formularios
 - **Consentimiento de cookies** (Consent Mode v2) con banner propio antes de cargar cualquier etiqueta de analítica
 - **Medición de eventos de negocio** (WhatsApp, formularios, teléfono, visualización de precios) vía Google Tag Manager
-- **SEO por ruta**: título/meta description y URL canónica propios en cada vista, sitemap, y datos estructurados (JSON-LD) para MusicSchool y LocalBusiness, más FAQPage solo en Preguntas Frecuentes
+- **SEO por ruta**: páginas prerenderizadas como HTML propio en el build, título/meta description y URL canónica propios en cada vista, sitemap, y datos estructurados (JSON-LD) para MusicSchool y LocalBusiness, más FAQPage solo en Preguntas Frecuentes
 - **Navegación fluida** entre páginas mediante Vue Router
 
 ## 🛠️ Tecnologías Utilizadas
@@ -60,7 +60,7 @@ Servidor de desarrollo en `http://localhost:8080` (abre el navegador automática
 ```bash
 npm run build
 ```
-Genera el build de producción en `dist/`.
+Genera el build de producción en `dist/`. Durante el build cada página se **prerenderiza** (con Puppeteer, lista de rutas en `vue.config.js`) y se guarda como HTML propio (`piano.html`, `precios.html`…), para que los buscadores reciban el contenido completo sin ejecutar JavaScript.
 
 ### 5. Probar build localmente
 ```bash
@@ -109,7 +109,7 @@ src/
 ├── views/                # Páginas principales (routing plano, vista = página)
 │   ├── Home.vue
 │   ├── Piano.vue
-│   ├── ConservatoryTests.vue    # Pruebas Conservatorio (?nivel=basicas | ?nivel=superiores)
+│   ├── ConservatoryTests.vue    # Pruebas de acceso: /pruebas-acceso-conservatorio-profesional y /pruebas-acceso-conservatorio-superior
 │   ├── MusicalLanguage.vue      # Refuerzo de Lenguaje Musical
 │   ├── ArtsBaccalaureateEVAU.vue  # Bachillerato de Artes o EVAU (/bachillerato-artes-evau)
 │   ├── Contact.vue              # Contacto

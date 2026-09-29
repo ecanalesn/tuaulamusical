@@ -32,13 +32,13 @@
                   class="dropdown-link submenu-trigger"
                   :aria-expanded="conservatorySubmenuOpen"
                   @click="conservatorySubmenuOpen = !conservatorySubmenuOpen"
-                >Pruebas Conservatorio <span aria-hidden="true">›</span></button>
+                >Pruebas de acceso al Conservatorio <span aria-hidden="true">›</span></button>
                 <ul class="submenu-menu" :class="{ show: conservatorySubmenuOpen }">
                   <li class="dropdown-item">
-                    <router-link to="/pruebas-conservatorio?nivel=basicas" class="dropdown-link" @click="closeMenu">Enseñanzas Básicas y Profesionales</router-link>
+                    <router-link to="/pruebas-acceso-conservatorio-profesional" class="dropdown-link" @click="closeMenu">Enseñanzas Básicas y Profesionales</router-link>
                   </li>
                   <li class="dropdown-item">
-                    <router-link to="/pruebas-conservatorio?nivel=superiores" class="dropdown-link" @click="closeMenu">Enseñanzas Superiores</router-link>
+                    <router-link to="/pruebas-acceso-conservatorio-superior" class="dropdown-link" @click="closeMenu">Enseñanzas Superiores</router-link>
                   </li>
                 </ul>
               </li>
@@ -324,18 +324,22 @@ export default {
   letter-spacing: 0.5px;
 }
 
+/* Texto y flecha en la misma línea (con float la flecha bajaba de línea) */
 .submenu-trigger {
   width: 100%;
   border: 0;
   background: transparent;
   cursor: pointer;
   text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .submenu-trigger span {
-  float: right;
-  margin-left: 20px;
   font-size: 18px;
+  line-height: 1;
 }
 
 .submenu-menu {

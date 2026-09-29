@@ -28,9 +28,9 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Preparación Conservatorio -->
+  <!-- Preparación Conservatorio: Básicas y Profesionales -->
   <url>
-    <loc>https://tuaulamusical.com/pruebas-conservatorio</loc>
+    <loc>https://tuaulamusical.com/pruebas-acceso-conservatorio-profesional</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -38,7 +38,7 @@
 
   <!-- Preparación Conservatorio: Enseñanzas Superiores -->
   <url>
-    <loc>https://tuaulamusical.com/pruebas-conservatorio?nivel=superiores</loc>
+    <loc>https://tuaulamusical.com/pruebas-acceso-conservatorio-superior</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

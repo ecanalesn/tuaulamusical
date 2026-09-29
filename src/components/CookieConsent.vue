@@ -24,6 +24,9 @@ export default {
     }
   },
   mounted() {
+    // Al prerenderizar en el build no hay visitante: el banner no debe quedar en el HTML
+    if (window.__PRERENDER_INJECTED) return
+
     let stored = null
     try {
       stored = localStorage.getItem(STORAGE_KEY)

@@ -42,6 +42,8 @@
   border-radius: 8px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  /* Capa decorativa: sin esto tapa los enlaces de la tarjeta y no se pueden pulsar */
+  pointer-events: none;
 }
 
 .pricing-card:hover {
@@ -203,6 +205,23 @@
   width: 16px;
   flex: 0 0 16px;
   margin-top: 2px;
+}
+
+/* Punto de la lista que enlaza a su página (campo "link" en pricing.json) */
+/* main.css da color a todos los <span>: aquí debe ser el gris de la lista */
+.card-features .feature-text {
+  color: inherit;
+}
+
+.card-features .feature-link {
+  color: var(--primary-turquoise);
+  font-weight: 600;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.card-features .feature-link:hover {
+  color: var(--accent-gold);
 }
 
 .plan-subjects {

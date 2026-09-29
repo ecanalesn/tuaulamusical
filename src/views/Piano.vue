@@ -64,7 +64,7 @@
                 </ul>
 
                 <p>
-                  A partir de los 8 años también pueden preparar las pruebas de acceso a las Enseñanzas Básicas del Conservatorio, en cualquier especialidad instrumental. <router-link to="/pruebas-conservatorio" class="inline-link">Consulta la preparación de las pruebas de acceso</router-link>.
+                  A partir de los 8 años también pueden preparar las pruebas de acceso a las Enseñanzas Básicas del Conservatorio, en cualquier especialidad instrumental. <router-link to="/pruebas-acceso-conservatorio-profesional" class="inline-link">Consulta la preparación de las pruebas de acceso</router-link>.
                 </p>
               </div>
             </div>

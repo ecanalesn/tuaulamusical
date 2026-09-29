@@ -32,10 +32,25 @@ const routes = [
     name: 'LenguajeMusical',
     component: MusicalLanguage
   },
+  // Misma vista para los dos niveles; `meta.level` decide qué contenido muestra
   {
+    path: '/pruebas-acceso-conservatorio-profesional',
+    name: 'PruebasConservatorioProfesional',
+    component: ConservatoryTests,
+    meta: { level: 'basicProfessional' }
+  },
+  {
+    path: '/pruebas-acceso-conservatorio-superior',
+    name: 'PruebasConservatorioSuperior',
+    component: ConservatoryTests,
+    meta: { level: 'superior' }
+  },
+  {
+    // Dirección antigua con ?nivel=: Netlify ya hace el 301 en _redirects
     path: '/pruebas-conservatorio',
-    name: 'PruebasConservatorio',
-    component: ConservatoryTests
+    redirect: to => to.query.nivel === 'superiores'
+      ? '/pruebas-acceso-conservatorio-superior'
+      : '/pruebas-acceso-conservatorio-profesional'
   },
   {
     path: '/bachillerato-artes-evau',

@@ -4,4 +4,8 @@
 # Bachillerato pasó de dirección en inglés a español: conservamos lo que Google ya tenga indexado
 /arts-baccalaureate-evau   /bachillerato-artes-evau   301
 
+# Pruebas de acceso: cada nivel tiene ahora su propia dirección (antes era ?nivel=)
+/pruebas-conservatorio   nivel=superiores   /pruebas-acceso-conservatorio-superior   301
+/pruebas-conservatorio                      /pruebas-acceso-conservatorio-profesional   301
+
 /*    /index.html   200

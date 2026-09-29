@@ -14,7 +14,9 @@ Disallow: /private/
 # Allow all important pages
 Allow: /piano
 Allow: /lenguaje-musical
-Allow: /pruebas-conservatorio
+Allow: /pruebas-acceso-conservatorio-profesional
+Allow: /pruebas-acceso-conservatorio-superior
+Allow: /bachillerato-artes-evau
 Allow: /precios
 Allow: /contacto
 Allow: /matricula

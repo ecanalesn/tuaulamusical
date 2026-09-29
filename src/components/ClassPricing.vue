@@ -15,7 +15,9 @@
         </div>
         <ul v-if="item.plan.features.length" class="class-pricing-features">
           <li v-for="(feature, index) in item.plan.features" :key="index">
-            <i class="fas fa-check"></i> {{ feature }}
+            <i class="fas fa-check"></i>
+            <span v-if="typeof feature === 'object'" class="feature-text">{{ feature.text + '. ' }}<template v-if="feature.link !== $route.path"><router-link :to="feature.link" class="feature-link">Info aquí</router-link></template></span>
+            <template v-else>{{ feature }}</template>
           </li>
         </ul>
       </div>
@@ -203,6 +205,22 @@ export default {
   color: var(--primary-turquoise);
   margin-right: 12px;
   width: 20px;
+}
+
+/* main.css da color a todos los <span>: aquí debe ser el gris de la lista */
+.feature-text {
+  color: inherit;
+}
+
+.feature-link {
+  color: var(--primary-turquoise);
+  font-weight: 600;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.feature-link:hover {
+  color: var(--accent-gold);
 }
 
 .class-pricing-note {
