@@ -1,28 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://tuaulamusical.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin areas (if any)
-Disallow: /admin/
-Disallow: /private/
-
-# Allow all important pages
-Allow: /piano
-Allow: /lenguaje-musical
-Allow: /pruebas-acceso-conservatorio-profesional
-Allow: /pruebas-acceso-conservatorio-superior
-Allow: /bachillerato-artes-evau
-Allow: /precios
-Allow: /contacto
-Allow: /matricula
-Allow: /preguntas-frecuentes
-
-# Host
-Host: https://tuaulamusical.com
-
-

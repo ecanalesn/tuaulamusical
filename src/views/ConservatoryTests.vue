@@ -2,7 +2,7 @@
   <div class="page-content">
     <section class="hero-section">
       <div class="hero-banner">
-        <h1>Pruebas de acceso al Conservatorio</h1>
+        <h1>Preparación a las pruebas de acceso al Conservatorio</h1>
       </div>
     </section>
 
@@ -191,13 +191,13 @@ export default {
     updatePageMeta() {
       if (this.activeLevel === 'superior') {
         setPageMeta(
-          'Pruebas de Acceso al Conservatorio Superior Rafael Orozco en Córdoba | Tu Aula Musical',
-          'Preparación de las pruebas de acceso a Enseñanzas Superiores de Música en el Conservatorio Superior Rafael Orozco de Córdoba: Análisis Musical, lectura a primera vista, repertorio de piano o solo parte teórica para Flamencología y otras especialidades.'
+          'Preparación pruebas de acceso al Conservatorio Superior en Córdoba | Tu Aula Musical',
+          'Preparación de las pruebas de acceso (examen de ingreso) a Enseñanzas Superiores de Música en el Conservatorio Superior Rafael Orozco de Córdoba: Análisis Musical, lectura a primera vista, piano y Flamencología.'
         )
       } else {
         setPageMeta(
-          'Pruebas de Acceso al Conservatorio en Córdoba: Básicas y Profesionales | Tu Aula Musical',
-          'Preparación de las pruebas de acceso al Conservatorio en Córdoba: Enseñanzas Básicas de cualquier especialidad, 3.º de Básicas en Educación Vocal y Enseñanzas Profesionales de Canto o Piano en el Músico Ziryab.'
+          'Preparación pruebas de acceso al Conservatorio en Córdoba: Básicas y Profesionales | Tu Aula Musical',
+          'Preparación de las pruebas de acceso (exámenes de ingreso) al Conservatorio en Córdoba: Enseñanzas Básicas de cualquier especialidad, 3.º de Básicas en Educación Vocal y Enseñanzas Profesionales de Canto o Piano.'
         )
       }
     },

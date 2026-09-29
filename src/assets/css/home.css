@@ -93,6 +93,7 @@
   margin: 0 !important;
   line-height: 1.45 !important;
   max-width: 620px;
+  text-align: justify;
 }
 
 .hero-tagline {
@@ -103,6 +104,7 @@
   margin: 22px 0 0 0;
   line-height: 1.6;
   max-width: 560px;
+  text-align: justify;
 }
 
 @keyframes pulse {
