@@ -11,7 +11,6 @@
           <span class="plan-amount">{{ item.plan.price }}€</span>
           <span class="plan-period">{{ item.plan.period }}</span>
           <span v-if="item.additionalOption" class="plan-option">{{ item.additionalOption }}</span>
-          <span v-if="item.soloPianoOption && !item.hideSoloPianoOption" class="plan-option">{{ item.soloPianoOption }}</span>
         </div>
         <ul v-if="item.plan.features.length" class="class-pricing-features">
           <li v-for="(feature, index) in item.plan.features" :key="index">
@@ -58,9 +57,9 @@ export default {
       .then(available => {
         this.loadedPlans = this.plans
           .map(entry => {
-            const { name, label, title, additionalOption, soloPianoOption, hideSoloPianoOption } = typeof entry === 'string' ? { name: entry, label: '', title: '', additionalOption: '', soloPianoOption: '', hideSoloPianoOption: false } : entry
+            const { name, label, title, additionalOption } = typeof entry === 'string' ? { name: entry, label: '', title: '', additionalOption: '' } : entry
             const plan = available.find(p => p.name === name)
-            return plan ? { plan, label, title, additionalOption: additionalOption || plan.additionalOption, soloPianoOption: soloPianoOption || plan.soloPianoOption, hideSoloPianoOption } : null
+            return plan ? { plan, label, title, additionalOption: additionalOption || plan.additionalOption } : null
           })
           .filter(Boolean)
       })

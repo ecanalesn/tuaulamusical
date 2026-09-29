@@ -101,7 +101,6 @@
               <span class="price-amount">{{ plan.price }}€</span>
               <span class="price-hours">{{ plan.period }}</span>
               <span v-if="plan.additionalOption" class="price-option">{{ plan.additionalOption }}</span>
-              <span v-if="plan.soloPianoOption" class="price-option">{{ plan.soloPianoOption }}</span>
             </div>
             <ul class="card-features">
               <li v-for="(feature, index) in plan.features" :key="index">
@@ -184,7 +183,7 @@ export default {
       .catch(() => {
         // fallback mínimo por si falla la carga
         this.pricingPlans = [
-          { id: 1, link: '/piano', name: 'Piano + Lenguaje Musical', price: 80, period: '4 horas/mes · 20€/hora', soloPianoOption: 'Opción solo Piano, sin acceso a la plataforma: 72€/mes · 18€/hora', featured: true, features: ['Matrícula 20€: incluye dos libros físicos propios', 'Clases individuales de Piano + Lenguaje Musical de una hora a la semana', 'Desde nivel inicial hasta avanzado', 'Para niños/as, adolescentes o adultos', 'Acceso a la plataforma con dos libros online gratuitos (2.º y 3.er mes)'] },
+          { id: 1, link: '/piano', name: 'Piano + Lenguaje Musical', price: 80, period: '4 horas/mes · 20€/hora', featured: true, features: ['Matrícula 20€: incluye dos libros físicos propios', 'Clases individuales de Piano + Lenguaje Musical de una hora a la semana', 'Desde nivel inicial hasta avanzado', 'Para niños/as, adolescentes o adultos', 'Acceso a la plataforma con dos libros online gratuitos (2.º y 3.er mes)'] },
           { id: 2, link: '/pruebas-acceso-conservatorio-profesional', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Básicas o Profesionales)', price: 120, period: '6 horas/mes · 20€/hora', additionalOption: 'Opción 4 horas: 80€/mes', featured: false, features: ['Matrícula: 20€ (Básicas) / 35€ (Profesionales), incluye uno o dos libros físicos propios según la preparación', 'Clases individuales de la preparación elegida de una hora y media a la semana', 'Opciones: pruebas de acceso a Enseñanzas Básicas de cualquier especialidad instrumental, pruebas de acceso a 3.º de Enseñanzas Básicas de Educación Vocal o pruebas de acceso a Enseñanzas Profesionales de Canto o Piano', 'Recomendable para niños/as de 8 a 16 años', 'Acceso a la plataforma con dos libros online gratuitos (2.º y 3.er mes)'] },
           { id: 3, link: '/pruebas-acceso-conservatorio-superior', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Superiores), EVAU (opción Música) o Bachillerato de Artes', price: 150, period: '6 horas/mes · 25€/hora', additionalOption: 'Opción 4 horas: 100€/mes', featured: false, badge: 'Nueva asignatura', features: ['Matrícula 35€, incluye dos libros físicos propios', 'Clases individuales de la preparación elegida de una hora y media a la semana', 'Para adolescentes y adultos', 'Clases de refuerzo de Análisis Musical de 1.º y 2.º de Enseñanzas Superiores disponibles', 'Clases de Bachillerato de Artes disponibles: Lenguaje y Práctica Musical, Análisis Musical, Coro y Técnica Vocal'] }
         ]

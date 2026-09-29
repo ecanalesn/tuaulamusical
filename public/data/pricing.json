@@ -4,7 +4,6 @@
     "name": "Piano + Lenguaje Musical",
     "price": 80,
     "period": "4 horas/mes · 20€/hora",
-    "soloPianoOption": "Opción solo Piano, sin acceso a la plataforma: 72€/mes · 18€/hora",
     "featured": true,
     "link": "/piano",
     "features": [

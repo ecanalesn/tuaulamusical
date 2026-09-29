@@ -69,7 +69,7 @@ export default {
         },
         {
           question: '¿Qué incluye la matrícula?',
-          answer: 'La matrícula incluye dos libros físicos propios, que se entregan a partir de la segunda clase. Las asignaturas con plataforma incluyen acceso y dos libros online gratuitos, disponibles durante el segundo y tercer mes. La opción Solo Piano de 72€/mes no incluye acceso a la plataforma. Si más adelante necesitas algún libro extra para el curso siguiente, tiene un coste de 8€.',
+          answer: 'La matrícula incluye dos libros físicos propios, que se entregan a partir de la segunda clase. Las asignaturas con plataforma incluyen acceso y dos libros online gratuitos, disponibles durante el segundo y tercer mes. Si más adelante necesitas algún libro extra para el curso siguiente, tiene un coste de 8€.',
           isOpen: false
         },
         {
@@ -79,7 +79,7 @@ export default {
         },
         {
           question: '¿Ofreces bonos regalo para clases?',
-          answer: 'Sí, tengo bonos regalo que incluyen una tarjeta personalizada. Puedes comprarlos para regalar clases a partir de un mes (72€, más 20€ de matrícula). Si quieres más información, escríbeme.',
+          answer: 'Sí, tengo bonos regalo que incluyen una tarjeta personalizada. Puedes comprarlos para regalar clases a partir de un mes (80€, más 20€ de matrícula). Si quieres más información, escríbeme.',
           isOpen: false
         }
       ]

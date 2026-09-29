@@ -90,16 +90,6 @@
                     type="radio"
                     name="selectedPlan"
                     v-model="form.selectedPlan"
-                    value="Solo Piano: 72€/mes"
-                    required
-                  >
-                  <span>Solo Piano: 72€/mes</span>
-                </label>
-                <label class="radio-option">
-                  <input
-                    type="radio"
-                    name="selectedPlan"
-                    v-model="form.selectedPlan"
                     value="Piano + Lenguaje Musical: 80€/mes"
                     required
                   >

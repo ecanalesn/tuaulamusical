@@ -42,7 +42,7 @@
           </div>
         </div>
 
-        <ClassPricing :plans="[{ name: 'Piano + Lenguaje Musical', title: 'Refuerzo de Lenguaje Musical', additionalOption: 'Opción 6 horas: 120€/mes', hideSoloPianoOption: true }]" />
+        <ClassPricing :plans="[{ name: 'Piano + Lenguaje Musical', title: 'Refuerzo de Lenguaje Musical', additionalOption: 'Opción 6 horas: 120€/mes' }]" />
 
         <div class="info-circles">
           <div class="info-circle">
