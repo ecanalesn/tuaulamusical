@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- Consent Mode v2 - por defecto denegado -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+    </script>
+
+    <!-- Restaura el consentimiento guardado en visitas anteriores (banner en
+         src/components/CookieConsent.vue), antes de que cargue GTM, para que
+         las etiquetas evalúen el estado correcto desde la primera carga. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('tam_cookie_consent');
+          if (stored === 'granted') {
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'ad_user_data': 'granted',
+              'ad_personalization': 'granted',
+              'analytics_storage': 'granted'
+            });
+          }
+        } catch (e) {
+          // localStorage no disponible (modo privado, etc.): se mantiene el consent por defecto (denegado)
+        }
+      })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M3Z9Z4HC');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="theme-color" content="#1f5968">
+    <meta name="msapplication-navbutton-color" content="#1f5968">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1f5968">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="manifest" href="<%= BASE_URL %>manifest.json">
+    <link rel="apple-touch-icon" href="<%= BASE_URL %>images/icon-192x192.png">
+    <title>Clases de piano y preparación al Conservatorio en Córdoba | Tu Aula Musical</title>
+    <meta name="description" content="Clases individuales en Córdoba de Piano, preparación a pruebas de acceso a Enseñanzas Básicas (todas las especialidades instrumentales), 3.º de Básicas (Educación Vocal), Enseñanzas Profesionales (Canto o Piano), Enseñanzas Superiores (Piano o Flamencología), Refuerzo de Lenguaje Musical, Análisis Musical, Bachillerato de Artes o EVAU (opción Música).">
+    <meta name="keywords" content="clases piano Córdoba, academia música Córdoba, conservatorio Córdoba, preparación conservatorio, pruebas acceso conservatorio, enseñanzas básicas, enseñanzas profesionales, enseñanzas superiores, conservatorio superior Rafael Orozco, CSM Rafael Orozco, conservatorio profesional Músico Ziryab, CPM Músico Ziryab, Educación Vocal, Canto, Flamencología, Análisis Musical, lectura a primera vista, lenguaje musical, refuerzo lenguaje musical, Bachillerato de Artes, EVAU opción Música, clases presenciales música, clases online música, metodología propia, piano Córdoba, España">
+    <meta name="author" content="Tu Aula Musical">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://tuaulamusical.com/">
+    <meta name="geo.region" content="ES-AN">
+    <meta name="geo.placename" content="Córdoba">
+    <meta name="geo.position" content="37.8882;-4.7794">
+    <meta name="ICBM" content="37.8882, -4.7794">
+    <meta name="language" content="es">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="coverage" content="worldwide">
+    <meta name="target" content="all">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta name="apple-mobile-web-app-title" content="Tu Aula Musical">
+    <meta name="application-name" content="Tu Aula Musical">
+    <meta name="msapplication-TileColor" content="#25D366">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Clases de piano y preparación al Conservatorio en Córdoba | Tu Aula Musical">
+    <meta property="og:description" content="Clases individuales en Córdoba de Piano, preparación a pruebas de acceso a Enseñanzas Básicas (todas las especialidades instrumentales), 3.º de Básicas (Educación Vocal), Enseñanzas Profesionales (Canto o Piano), Enseñanzas Superiores (Piano o Flamencología), Refuerzo de Lenguaje Musical, Análisis Musical, Bachillerato de Artes o EVAU (opción Música).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tuaulamusical.com/">
+    <meta property="og:image" content="https://tuaulamusical.com/images/cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Tu Aula Musical">
+    <meta property="og:updated_time" content="2026-09-29T00:00:00+02:00">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clases de piano y preparación al Conservatorio en Córdoba | Tu Aula Musical">
+    <meta name="twitter:description" content="Clases individuales en Córdoba de Piano, preparación a pruebas de acceso a Enseñanzas Básicas (todas las especialidades instrumentales), 3.º de Básicas (Educación Vocal), Enseñanzas Profesionales (Canto o Piano), Enseñanzas Superiores (Piano o Flamencología), Refuerzo de Lenguaje Musical, Análisis Musical, Bachillerato de Artes o EVAU (opción Música).">
+    <meta name="twitter:image" content="https://tuaulamusical.com/images/cover.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicSchool",
+      "name": "Tu Aula Musical",
+      "alternateName": "Clases de piano y preparación al Conservatorio en Córdoba | Tu Aula Musical",
+      "description": "Clases individuales en Córdoba de Piano, preparación a pruebas de acceso a Enseñanzas Básicas (todas las especialidades instrumentales), 3.º de Básicas (Educación Vocal), Enseñanzas Profesionales (Canto o Piano), Enseñanzas Superiores (Piano o Flamencología), Refuerzo de Lenguaje Musical, Análisis Musical, Bachillerato de Artes o EVAU (opción Música).",
+      "url": "https://tuaulamusical.com",
+      "logo": "https://tuaulamusical.com/images/logo.png",
+      "image": "https://tuaulamusical.com/images/cover.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza de Andalucía, 7",
+        "addressLocality": "Córdoba",
+        "addressRegion": "Andalucía",
+        "postalCode": "14013",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "37.8882",
+        "longitude": "-4.7794"
+      },
+      "telephone": "+34616471534",
+      "email": "tuaulamusical@gmail.com",
+      "priceRange": "€72-€150",
+      "openingHours": [
+        "Mo-Th 16:30-20:30"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Clases de Música",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Clases de piano en Córdoba",
+              "description": "Clases individuales de piano para niños/as, adolescentes y adultos, desde nivel inicial hasta avanzado"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Preparación de las pruebas de acceso a las Enseñanzas Básicas del Conservatorio",
+              "description": "Clases de preparación para las pruebas de acceso a las Enseñanzas Básicas de cualquier especialidad instrumental"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Preparación de las pruebas de acceso a 3.º de Enseñanzas Básicas en Educación Vocal",
+              "description": "Clases de preparación para las pruebas de acceso a 3.º de Enseñanzas Básicas en la especialidad de Educación Vocal del Conservatorio Profesional de Música Músico Ziryab de Córdoba"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Preparación de las pruebas de acceso a las Enseñanzas Profesionales del Conservatorio",
+              "description": "Clases de preparación para las pruebas de acceso a las Enseñanzas Profesionales de Canto o Piano en el Conservatorio Profesional de Música Músico Ziryab de Córdoba"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Preparación de las pruebas de acceso a las Enseñanzas Superiores de Música",
+              "description": "Clases de preparación para las pruebas de acceso al Conservatorio Superior de Música Rafael Orozco de Córdoba: Análisis Musical, lectura a primera vista, repertorio de piano o solo parte teórica para Flamencología y otras especialidades"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Clases de refuerzo de Lenguaje Musical",
+              "description": "Clases de refuerzo de Lenguaje Musical (teoría, dictado, ritmo y entonación) para Enseñanzas Básicas y Profesionales del Conservatorio"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Bachillerato de Artes y EVAU (opción Música)",
+              "description": "Clases de Lenguaje y Práctica Musical, Análisis Musical, Coro y Técnica Vocal para Bachillerato de Artes y preparación de la EVAU, opción Música"
+            }
+          }
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Córdoba"
+        },
+        {
+          "@type": "Country",
+          "name": "España"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- El FAQ Schema (FAQPage) lo genera FrequentlyAskedQuestions.vue solo en esa página -->
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tu Aula Musical",
+      "image": "https://tuaulamusical.com/images/logo.png",
+      "description": "Clases individuales en Córdoba de Piano, preparación a pruebas de acceso a Enseñanzas Básicas (todas las especialidades instrumentales), 3.º de Básicas (Educación Vocal), Enseñanzas Profesionales (Canto o Piano), Enseñanzas Superiores (Piano o Flamencología), Refuerzo de Lenguaje Musical, Análisis Musical, Bachillerato de Artes o EVAU (opción Música).",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza de Andalucía, 7",
+        "addressLocality": "Córdoba",
+        "addressRegion": "Andalucía",
+        "postalCode": "14013",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "37.8882",
+        "longitude": "-4.7794"
+      },
+      "url": "https://tuaulamusical.com",
+      "telephone": "+34616471534",
+      "email": "tuaulamusical@gmail.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "16:30",
+          "closes": "20:30"
+        }
+      ],
+      "priceRange": "€72-€150",
+      "currenciesAccepted": "EUR",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Córdoba"
+        },
+        {
+          "@type": "Country",
+          "name": "España"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- WOW.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3Z9Z4HC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <noscript>
+      <strong>Lo sentimos, pero Tu Aula Musical no funciona correctamente sin JavaScript habilitado. Por favor, actívalo para continuar.</strong>
+    </noscript>
+    <div id="app"></div>
+    
+    <!-- Hidden forms for Netlify detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="enrollment" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+      <input type="text" name="studentName" />
+      <input type="text" name="parentName" />
+      <input type="number" name="age" />
+      <input type="tel" name="phone" />
+      <input type="tel" name="parentPhone" />
+      <input type="radio" name="selectedPlan" />
+      <input type="radio" name="hoursPerMonth" />
+      <input type="text" name="selectedSchedule" />
+      <input type="date" name="startDate" />
+    </form>
+
+    <!-- built files will be auto injected -->
+  </body>
+</html>

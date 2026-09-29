@@ -1,0 +1,7 @@
+# La página de canto ya no existe: redirigimos a la portada para no perder el tráfico indexado
+/canto   /   301
+
+# Bachillerato pasó de dirección en inglés a español: conservamos lo que Google ya tenga indexado
+/arts-baccalaureate-evau   /bachillerato-artes-evau   301
+
+/*    /index.html   200
