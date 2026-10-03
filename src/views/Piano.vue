@@ -71,7 +71,7 @@
           </section>
         </div>
 
-        <ClassPricing :plans="['Piano + Lenguaje Musical']" />
+        <ClassPricing :plans="['Piano']" />
 
         <div class="info-circles">
           <div class="info-circle">

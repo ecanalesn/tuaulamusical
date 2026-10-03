@@ -29,41 +29,44 @@
         <div class="clases-creativas-section">
           <h3 class="clases-title">Clases</h3>
           <div class="clases-grid">
-            <div class="clase-card" data-step="1">
+            <div class="clase-card">
               <router-link to="/piano" class="clase-link">
-                <div class="clase-icon">
-                  <svg class="clase-icon-keyboard" viewBox="0 0 58 36" aria-hidden="true"><rect x="1" y="1" width="56" height="34" rx="2" fill="none" /><g><line x1="9" y1="1" x2="9" y2="35" /><line x1="17" y1="1" x2="17" y2="35" /><line x1="25" y1="1" x2="25" y2="35" /><line x1="33" y1="1" x2="33" y2="35" /><line x1="41" y1="1" x2="41" y2="35" /><line x1="49" y1="1" x2="49" y2="35" /></g><g class="keys"><rect x="6.5" y="1" width="5" height="21" /><rect x="14.5" y="1" width="5" height="21" /><rect x="30.5" y="1" width="5" height="21" /><rect x="38.5" y="1" width="5" height="21" /><rect x="46.5" y="1" width="5" height="21" /></g></svg>
-                </div>
+                <span class="clase-kicker">Clases de instrumento</span>
                 <h4>Piano</h4>
                 <p>Interpretación musical y técnica pianística para niños/as, adolescentes y adultos</p>
+                <span class="clase-more">Ver clase <span aria-hidden="true">→</span></span>
               </router-link>
             </div>
-            <div class="clase-card" data-step="2">
+            <div class="clase-card">
               <router-link to="/pruebas-acceso-conservatorio-profesional" class="clase-link">
-                <div class="clase-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
-                <h4>Preparación a las pruebas de acceso a Enseñanzas Básicas o Profesionales del Conservatorio</h4>
+                <span class="clase-kicker">Pruebas de acceso</span>
+                <h4>Enseñanzas Básicas y Profesionales del Conservatorio</h4>
                 <p>Enseñanzas Básicas de cualquier especialidad, 3.º de Básicas de Educación Vocal o Enseñanzas Profesionales de Canto o Piano</p>
+                <span class="clase-more">Ver clase <span aria-hidden="true">→</span></span>
               </router-link>
             </div>
-            <div class="clase-card" data-step="3">
+            <div class="clase-card">
               <router-link to="/pruebas-acceso-conservatorio-superior" class="clase-link">
-                <div class="clase-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
-                <h4>Preparación a las pruebas de acceso a Enseñanzas Superiores del Conservatorio</h4>
+                <span class="clase-kicker">Pruebas de acceso</span>
+                <h4>Enseñanzas Superiores del Conservatorio</h4>
                 <p>Análisis Musical, lectura a primera vista, repertorio de piano o solo parte teórica (Flamencología)</p>
+                <span class="clase-more">Ver clase <span aria-hidden="true">→</span></span>
               </router-link>
             </div>
-            <div class="clase-card" data-step="4">
+            <div class="clase-card">
               <router-link to="/lenguaje-musical" class="clase-link">
-                <div class="clase-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
-                <h4>Refuerzo de Lenguaje Musical</h4>
+                <span class="clase-kicker">Clases de refuerzo</span>
+                <h4>Lenguaje Musical</h4>
                 <p>Teoría, dictado, ritmo y entonación para Enseñanzas Básicas y Profesionales</p>
+                <span class="clase-more">Ver clase <span aria-hidden="true">→</span></span>
               </router-link>
             </div>
-            <div class="clase-card" data-step="5">
+            <div class="clase-card">
               <router-link to="/bachillerato-artes-evau" class="clase-link">
-                <div class="clase-icon"><i class="fa-solid fa-music" aria-hidden="true"></i></div>
-                <h4>Refuerzo de Bachillerato de Artes o preparación a la EVAU</h4>
+                <span class="clase-kicker">Clases de refuerzo</span>
+                <h4>Bachillerato de Artes y EVAU</h4>
                 <p>Preparación para la EVAU (opción Música) y asignaturas de Bachillerato de Artes</p>
+                <span class="clase-more">Ver clase <span aria-hidden="true">→</span></span>
               </router-link>
             </div>
           </div>
@@ -95,7 +98,7 @@
               <div v-if="plan.featured" class="popular-badge">Más popular</div>
               <div v-if="plan.badge" class="new-plan-badge">{{ plan.badge }}</div>
             </div>
-            <h3 class="card-title">{{ plan.name }}</h3>
+            <h3 class="card-title">{{ plan.name }}<span v-if="plan.subtitle" class="card-subtitle">{{ plan.subtitle }}</span></h3>
             <div v-if="plan.choiceLabel" class="choice-label">{{ plan.choiceLabel }}</div>
             <div class="card-price">
               <span class="price-amount">{{ plan.price }}€</span>
@@ -180,13 +183,14 @@ export default {
     // Carga dinámica desde JSON público
     fetch('/data/pricing.json')
       .then(r => r.json())
-      .then(data => { this.pricingPlans = data })
+      // Los planes con listed: false solo se muestran en la página de su clase
+      .then(data => { this.pricingPlans = data.filter(plan => plan.listed !== false) })
       .catch(() => {
         // fallback mínimo por si falla la carga
         this.pricingPlans = [
-          { id: 1, link: '/piano', name: 'Piano + Lenguaje Musical', price: 80, period: '4 horas/mes · 20€/hora', soloPianoOption: 'Opción solo Piano, sin acceso a la plataforma: 72€/mes · 18€/hora', featured: true, features: ['Matrícula 20€: incluye dos libros físicos propios', 'Clases individuales de Piano + Lenguaje Musical de una hora a la semana', 'Desde nivel inicial hasta avanzado', 'Para niños/as, adolescentes o adultos', 'Acceso a la plataforma con dos libros online gratuitos (2.º y 3.er mes)'] },
+          { id: 1, link: '/piano', name: 'Piano', subtitle: 'Desde iniciación, para niños/as, jóvenes y adultos', price: 72, period: '4 horas/mes · 18€/hora', additionalOption: 'Opción con parte de la clase de Lenguaje Musical: 80€/mes (matrícula 20€)', featured: true, features: ['Matrícula 15€: incluye un libro físico propio de piano', 'Clases individuales de Piano de una hora a la semana', 'Desde nivel inicial hasta avanzado', 'Para niños/as, adolescentes o adultos'] },
           { id: 2, link: '/pruebas-acceso-conservatorio-profesional', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Básicas o Profesionales)', price: 120, period: '6 horas/mes · 20€/hora', additionalOption: 'Opción 4 horas: 80€/mes', featured: false, features: ['Matrícula: 20€ (Básicas) / 35€ (Profesionales), incluye uno o dos libros físicos propios según la preparación', 'Clases individuales de la preparación elegida de una hora a la semana', 'Opciones: pruebas de acceso a Enseñanzas Básicas de cualquier especialidad instrumental, pruebas de acceso a 3.º de Enseñanzas Básicas de Educación Vocal o pruebas de acceso a Enseñanzas Profesionales de Canto o Piano', 'Recomendable para niños/as de 8 a 16 años', 'Acceso a la plataforma con dos libros online gratuitos (2.º y 3.er mes)'] },
-          { id: 3, link: '/pruebas-acceso-conservatorio-superior', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Superiores), EVAU (opción Música) o Bachillerato de Artes', price: 150, period: '6 horas/mes · 25€/hora', additionalOption: 'Opción 4 horas: 100€/mes', featured: false, badge: 'Nueva asignatura', features: ['Matrícula 35€, incluye dos libros físicos propios', 'Clases individuales de la preparación elegida de una hora a la semana', 'Para adolescentes y adultos', 'Clases de refuerzo de Análisis Musical de 1.º y 2.º de Enseñanzas Superiores disponibles', 'Clases de Bachillerato de Artes disponibles: Lenguaje y Práctica Musical, Análisis Musical, Coro y Técnica Vocal'] }
+          { id: 3, link: '/pruebas-acceso-conservatorio-superior', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Superiores), EVAU (opción Música) o Bachillerato de Artes', price: 150, period: '6 horas/mes · 25€/hora', additionalOption: 'Opción 4 horas: 100€/mes', featured: false, badge: 'Nueva asignatura', features: ['Matrícula 35€: incluye dos libros físicos propios (Preparación a las pruebas y Escalas de Hanon), así como el repertorio elegido', 'Clases individuales de la preparación elegida de una hora a la semana', 'Para adolescentes y adultos', 'Clases de refuerzo de Análisis Musical de 1.º y 2.º de Enseñanzas Superiores disponibles', 'Clases de Bachillerato de Artes disponibles: Lenguaje y Práctica Musical, Análisis Musical, Coro y Técnica Vocal'] }
         ]
       })
 

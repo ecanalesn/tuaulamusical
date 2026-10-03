@@ -220,7 +220,7 @@ export default {
 }
 
 .feature-link:hover {
-  color: var(--accent-gold);
+  color: var(--accent-terracotta);
 }
 
 .class-pricing-note {

@@ -119,8 +119,20 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Línea bajo el nombre del plan (p. ej. "Desde iniciación…" en Piano) */
+.card-subtitle {
+  display: block;
+  margin-top: 12px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #555;
 }
 
 .choice-label {
@@ -221,7 +233,7 @@
 }
 
 .card-features .feature-link:hover {
-  color: var(--accent-gold);
+  color: var(--accent-terracotta);
 }
 
 .plan-subjects {

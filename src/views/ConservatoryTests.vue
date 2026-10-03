@@ -25,7 +25,7 @@
             </p>
             <p>
               Lo recomendable es prepararla con al menos tres meses de antelación, aunque si dispones de menos tiempo también ofrezco cursos intensivos de un mes.
-              Trabajamos con modelos de examen y con un libro propio, incluido en la matrícula (20€).
+              Trabajamos con modelos de examen y con un libro físico propio, incluido en la matrícula (20€).
             </p>
 
             <h4>Qué se evalúa en la prueba</h4>
@@ -76,7 +76,7 @@
             <p>Depende de tu nivel y del tiempo que puedas dedicar cada día. Si partes de cero, lo ideal es un curso de un año aproximadamente, o uno intensivo de al menos 9 meses, con unas 2 horas de estudio diario. Como las pruebas suelen ser en mayo, lo habitual es empezar en septiembre. En cualquier caso, la preparación se adapta a tu disponibilidad y a tu ritmo.</p>
 
             <p class="conservatory-faq-question">¿Cómo consigo el temario?</p>
-            <p>El temario está incluido en la matrícula (35€). Al empezar las clases recibes dos libros de preparación, modelos de examen y recursos adicionales en la plataforma.</p>
+            <p>El temario está incluido en la matrícula (35€). Al empezar las clases recibes dos libros físicos propios, <em>Preparación a las pruebas</em> (Análisis Musical y lectura a primera vista) y <em>Escalas de Hanon para piano</em>, así como el repertorio de las obras que elijas, modelos de examen y recursos adicionales en la plataforma.</p>
 
           </div>
         </div>

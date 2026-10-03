@@ -211,8 +211,10 @@ a {
   /* Petróleo muy claro */
   --dark-turquoise: #133a44;
   /* Petróleo oscuro */
-  --accent-gold: #b08d57;
-  /* Acento dorado */
+  --accent-terracotta: #b5532f;
+  /* Acento terracota */
+  --accent-terracotta-light: #e9a07c;
+  /* Terracota claro, para usar sobre fondos oscuros (pie de página) */
   --accent-yellow: #FFC107;
   --accent-green: #4CAF50;
   --accent-purple: #9C27B0;

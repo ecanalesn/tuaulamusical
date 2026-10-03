@@ -132,7 +132,7 @@
   top: calc(8px + 0.8em);
   width: 6px;
   height: 6px;
-  background: var(--accent-gold);
+  background: var(--accent-terracotta);
 }
 
 /* En listas numeradas ya se muestra el número */
@@ -197,7 +197,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--accent-gold);
+  color: var(--accent-terracotta);
 }
 
 .info-circle h4 {

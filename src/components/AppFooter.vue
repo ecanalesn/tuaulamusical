@@ -73,7 +73,7 @@ export default {
 
 .footer-section h3,
 .footer-section h4 {
-  color: var(--accent-gold);
+  color: var(--accent-terracotta-light);
   margin-bottom: 20px;
   font-family: 'Playfair Display', Georgia, serif;
   text-align: left;
@@ -110,7 +110,7 @@ export default {
 }
 
 .footer-section ul li a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-terracotta-light);
 }
 
 .contact-info p {
@@ -126,13 +126,13 @@ export default {
 }
 
 .contact-info a:hover {
-  color: var(--accent-gold);
+  color: var(--accent-terracotta-light);
   text-decoration: underline;
 }
 
 .contact-info i {
   margin-right: 10px;
-  color: var(--accent-gold);
+  color: var(--accent-terracotta-light);
   width: 20px;
 }
 
