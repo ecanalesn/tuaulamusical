@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git filter-branch:*)",
+      "PowerShell(git push --force-with-lease:*)"
+    ]
+  }
+}

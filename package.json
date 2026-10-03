@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "prebuild": "puppeteer browsers install chrome",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

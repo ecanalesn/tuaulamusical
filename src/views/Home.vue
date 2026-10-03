@@ -3,11 +3,11 @@
             <!-- Hero Section -->
             <section class="home-hero-section">
               <div class="hero-image">
-                <img src="/images/cover.png" alt="Tu Aula Musical" class="hero-img" fetchpriority="high" loading="eager">
+                <img src="/images/hero-cover.jpg" alt="Partitura abierta sobre un piano en Tu Aula Musical, Córdoba" width="1920" height="1280" class="hero-img" fetchpriority="high" loading="eager">
                 <div class="hero-text">
                   <h1 class="hero-title">Tu Aula Musical</h1>
-                  <h2 class="hero-services">Piano, preparación a las pruebas de acceso a Enseñanzas Básicas, Profesionales o Superiores de Música, refuerzo de Lenguaje Musical o Bachillerato de Artes y preparación a la EVAU (opción Música)</h2>
-                  <p class="hero-tagline">Clases individuales en Córdoba, adaptadas a tu nivel y a tus objetivos desde el primer día.</p>
+                  <h2 class="hero-services">Clases de piano, preparación a las pruebas de acceso a Enseñanzas Básicas, Profesionales y Superiores de Música, refuerzo de Lenguaje Musical, Análisis Musical y Bachillerato de Artes y preparación a la EVAU (opción Música)</h2>
+                  <p class="hero-tagline">Formación individual en Córdoba, adaptada a tu nivel y a tus objetivos desde el primer día.</p>
                 </div>
               </div>
             </section>
@@ -18,7 +18,7 @@
         <div class="aula-header">
           <h2 class="aula-title">El Aula</h2>
           <div class="aula-description">
-            <p>Soy Estefanía, licenciada en Flamencología, Máster de Formación del Profesorado de ESO y Bachillerato, pianista profesional y cantante. Desde 2012 doy clases de piano, preparo pruebas de acceso al Conservatorio, desde Enseñanzas Básicas hasta Superiores, y ofrezco refuerzo de asignaturas de música como Lenguaje Musical, Análisis Musical o las de Bachillerato de Artes.</p>
+            <p>Soy Estefanía, licenciada en Flamencología, Máster en Formación del Profesorado de ESO y Bachillerato, FP e Idiomas, pianista profesional y cantante. Desde 2012 doy clases de piano, preparo pruebas de acceso al Conservatorio, desde Enseñanzas Básicas hasta Superiores, y ofrezco refuerzo de asignaturas de música como Lenguaje Musical, Análisis Musical o las de Bachillerato de Artes.</p>
             <p>Las clases son individuales y presenciales, en mi aula de Córdoba. Trabajo con metodología y libros propios, inspirados en los métodos de piano de Bastien y John Thompson, y adapto cada clase a tu nivel, a tu ritmo y a tu objetivo: aprender a tocar, aprobar una prueba de acceso o sacar adelante una asignatura.</p>
             <p>Si empiezas de cero con el piano, sigues un sistema propio estructurado en cinco niveles, pensado para cualquier edad.</p>
             <p>Además, tienes acceso a mi plataforma online, con recursos interactivos para seguir practicando entre clase y clase.</p>
@@ -104,7 +104,6 @@
               <span class="price-amount">{{ plan.price }}€</span>
               <span class="price-hours">{{ plan.period }}</span>
               <span v-if="plan.additionalOption" class="price-option">{{ plan.additionalOption }}</span>
-              <span v-if="plan.soloPianoOption" class="price-option">{{ plan.soloPianoOption }}</span>
             </div>
             <ul class="card-features">
               <li v-for="(feature, index) in plan.features" :key="index">
@@ -171,8 +170,8 @@ export default {
   },
   created() {
     setPageMeta(
-      'Clases de piano y preparación al Conservatorio en Córdoba | Tu Aula Musical',
-      'Clases individuales en Córdoba de Piano, preparación a pruebas de acceso a Enseñanzas Básicas (todas las especialidades instrumentales), 3.º de Básicas (Educación Vocal), Enseñanzas Profesionales (Canto o Piano), Enseñanzas Superiores (Piano o Flamencología), Refuerzo de Lenguaje Musical, Análisis Musical, Bachillerato de Artes o EVAU (opción Música).'
+      'Clases de piano y preparación a las pruebas de acceso al Conservatorio en Córdoba | Tu Aula Musical',
+      'Clases individuales de piano y preparación a las pruebas de acceso al Conservatorio en Córdoba: Enseñanzas Básicas, Profesionales y Superiores. También refuerzo de Lenguaje Musical, Bachillerato de Artes y EVAU (opción Música).'
     )
   },
   mounted() {
@@ -189,8 +188,8 @@ export default {
         // fallback mínimo por si falla la carga
         this.pricingPlans = [
           { id: 1, link: '/piano', name: 'Piano', subtitle: 'Desde iniciación, para niños/as, jóvenes y adultos', price: 72, period: '4 horas/mes · 18€/hora', additionalOption: 'Opción con parte de la clase de Lenguaje Musical: 80€/mes (matrícula 20€)', featured: true, features: ['Matrícula 15€: incluye un libro físico propio de piano', 'Clases individuales de Piano de una hora a la semana', 'Desde nivel inicial hasta avanzado', 'Para niños/as, adolescentes o adultos'] },
-          { id: 2, link: '/pruebas-acceso-conservatorio-profesional', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Básicas o Profesionales)', price: 120, period: '6 horas/mes · 20€/hora', additionalOption: 'Opción 4 horas: 80€/mes', featured: false, features: ['Matrícula: 20€ (Básicas) / 35€ (Profesionales), incluye uno o dos libros físicos propios según la preparación', 'Clases individuales de la preparación elegida de una hora a la semana', 'Opciones: pruebas de acceso a Enseñanzas Básicas de cualquier especialidad instrumental, pruebas de acceso a 3.º de Enseñanzas Básicas de Educación Vocal o pruebas de acceso a Enseñanzas Profesionales de Canto o Piano', 'Recomendable para niños/as de 8 a 16 años', 'Acceso a la plataforma con dos libros online gratuitos (2.º y 3.er mes)'] },
-          { id: 3, link: '/pruebas-acceso-conservatorio-superior', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Superiores), EVAU (opción Música) o Bachillerato de Artes', price: 150, period: '6 horas/mes · 25€/hora', additionalOption: 'Opción 4 horas: 100€/mes', featured: false, badge: 'Nueva asignatura', features: ['Matrícula 35€: incluye dos libros físicos propios (Preparación a las pruebas y Escalas de Hanon), así como el repertorio elegido', 'Clases individuales de la preparación elegida de una hora a la semana', 'Para adolescentes y adultos', 'Clases de refuerzo de Análisis Musical de 1.º y 2.º de Enseñanzas Superiores disponibles', 'Clases de Bachillerato de Artes disponibles: Lenguaje y Práctica Musical, Análisis Musical, Coro y Técnica Vocal'] }
+          { id: 2, link: '/pruebas-acceso-conservatorio-profesional', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Básicas o Profesionales)', price: 120, period: '6 horas/mes · 20€/hora', additionalOption: 'Opción 4 horas: 80€/mes', featured: false, features: ['Matrícula: 20€ (Básicas) / 35€ (Profesionales), incluye uno o dos libros físicos propios según la preparación', 'Clases individuales de la preparación elegida de una hora y media a la semana', 'Opciones: pruebas de acceso a Enseñanzas Básicas de cualquier especialidad instrumental, pruebas de acceso a 3.º de Enseñanzas Básicas de Educación Vocal o pruebas de acceso a Enseñanzas Profesionales de Canto o Piano', 'Recomendable para niños/as de 8 a 16 años', 'Acceso a la plataforma con dos libros online gratuitos (2.º y 3.er mes)'] },
+          { id: 3, link: '/pruebas-acceso-conservatorio-superior', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Superiores), EVAU (opción Música) o Bachillerato de Artes', price: 150, period: '6 horas/mes · 25€/hora', additionalOption: 'Opción 4 horas: 100€/mes', featured: false, badge: 'Nueva asignatura', features: ['Matrícula 35€: incluye dos libros físicos propios (Preparación a las pruebas y Escalas de Hanon), así como el repertorio elegido', 'Clases individuales de la preparación elegida de una hora y media a la semana', 'Para adolescentes y adultos', 'Clases de refuerzo de Análisis Musical de 1.º y 2.º de Enseñanzas Superiores disponibles', 'Clases de Bachillerato de Artes disponibles: Lenguaje y Práctica Musical, Análisis Musical, Coro y Técnica Vocal'] }
         ]
       })
 
