@@ -20,14 +20,8 @@
           <div class="aula-description">
             <p>Soy Estefanía, licenciada en Flamencología, Máster en Formación del Profesorado de ESO y Bachillerato, FP e Idiomas, pianista profesional y cantante. Desde 2012 doy clases de piano, preparo pruebas de acceso al Conservatorio, desde Enseñanzas Básicas hasta Superiores, y ofrezco refuerzo de asignaturas de música como Lenguaje Musical, Análisis Musical o las de Bachillerato de Artes.</p>
             <p>Las clases son individuales y presenciales, en mi aula de Córdoba. Adapto cada clase a tu nivel, a tu ritmo y a tu objetivo: aprender a tocar, aprobar una prueba de acceso o sacar adelante una asignatura.</p>
-            <p>En piano sigo los métodos de John Thompson y Bastien, organizados en cinco niveles, y elijo el más adecuado según tu edad y tu nivel.</p>
-          </div>
-
-          <div class="platform-card">
-            <span class="platform-kicker">Incluido en tus clases</span>
-            <h3 class="platform-title">Apuntes en PDF en tu plataforma online</h3>
-            <p class="platform-text">Además de las clases, tienes acceso a la plataforma con apuntes propios en PDF: contenido extra para seguir aprendiendo y repasar a tu ritmo entre clase y clase.</p>
-            <router-link to="/aula-virtual" class="btn-schedule platform-button">Acceso al Aula Virtual</router-link>
+            <p>En piano sigo los métodos de John Thompson y Bastien, organizados en cinco niveles, y elijo el más adecuado según tu edad y tu nivel. Para los niños y niñas de 4 a 12 años he creado además mi propio método, <em>Aprendiendo música con Allegretto</em>: <router-link to="/#aprendiendo-musica" class="aula-link">te lo cuento más abajo</router-link>.</p>
+            <p>Además, tienes acceso a la plataforma con <strong class="aula-highlight">apuntes propios en PDF</strong>, contenido extra para repasar a tu ritmo entre clase y clase.</p>
           </div>
       </div>
       
