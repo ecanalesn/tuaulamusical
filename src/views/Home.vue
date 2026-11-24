@@ -6,7 +6,7 @@
                 <img src="/images/hero-cover.jpg" alt="Partitura abierta sobre un piano en Tu Aula Musical, Córdoba" width="1920" height="1280" class="hero-img" fetchpriority="high" loading="eager">
                 <div class="hero-text">
                   <h1 class="hero-title">Tu Aula Musical</h1>
-                  <h2 class="hero-services">Clases de piano, preparación a las pruebas de acceso a Enseñanzas Básicas, Profesionales y Superiores de Música, refuerzo de Lenguaje Musical, Análisis Musical y Bachillerato de Artes y preparación a la EVAU (opción Música)</h2>
+                  <h2 class="hero-services">Clases de piano para niños/as desde 4 años, jóvenes y adultos, preparación a las pruebas de acceso a Enseñanzas Básicas, Profesionales y Superiores de Música, refuerzo de Lenguaje Musical, Análisis Musical y Bachillerato de Artes y preparación a la EVAU (opción Música)</h2>
                   <p class="hero-tagline">Formación individual en Córdoba, adaptada a tu nivel y a tus objetivos desde el primer día.</p>
                 </div>
               </div>
@@ -19,9 +19,15 @@
           <h2 class="aula-title">El Aula</h2>
           <div class="aula-description">
             <p>Soy Estefanía, licenciada en Flamencología, Máster en Formación del Profesorado de ESO y Bachillerato, FP e Idiomas, pianista profesional y cantante. Desde 2012 doy clases de piano, preparo pruebas de acceso al Conservatorio, desde Enseñanzas Básicas hasta Superiores, y ofrezco refuerzo de asignaturas de música como Lenguaje Musical, Análisis Musical o las de Bachillerato de Artes.</p>
-            <p>Las clases son individuales y presenciales, en mi aula de Córdoba. Trabajo con metodología y libros propios, inspirados en los métodos de piano de Bastien y John Thompson, y adapto cada clase a tu nivel, a tu ritmo y a tu objetivo: aprender a tocar, aprobar una prueba de acceso o sacar adelante una asignatura.</p>
-            <p>Si empiezas de cero con el piano, sigues un sistema propio estructurado en cinco niveles, pensado para cualquier edad.</p>
-            <p>Además, tienes acceso a mi plataforma online, con recursos interactivos para seguir practicando entre clase y clase.</p>
+            <p>Las clases son individuales y presenciales, en mi aula de Córdoba. Adapto cada clase a tu nivel, a tu ritmo y a tu objetivo: aprender a tocar, aprobar una prueba de acceso o sacar adelante una asignatura.</p>
+            <p>En piano sigo los métodos de John Thompson y Bastien, organizados en cinco niveles, y elijo el más adecuado según tu edad y tu nivel.</p>
+          </div>
+
+          <div class="platform-card">
+            <span class="platform-kicker">Incluido en tus clases</span>
+            <h3 class="platform-title">Apuntes en PDF en tu plataforma online</h3>
+            <p class="platform-text">Además de las clases, tienes acceso a la plataforma con apuntes propios en PDF: contenido extra para seguir aprendiendo y repasar a tu ritmo entre clase y clase.</p>
+            <router-link to="/aula-virtual" class="btn-schedule platform-button">Acceso al Aula Virtual</router-link>
           </div>
       </div>
       
@@ -74,8 +80,22 @@
       </div>
     </section>
 
-
-
+    <!-- Aprendiendo música con Allegretto -->
+    <section class="allegretto-section wow fadeInUp" id="aprendiendo-musica">
+      <div class="container">
+        <div class="allegretto-panel">
+          <span class="allegretto-kicker">Método propio para niños y niñas</span>
+          <h2 class="allegretto-title">Aprendiendo música con Allegretto</h2>
+          <p class="allegretto-text">
+            He creado <em>Aprendiendo música</em>, mi propia colección de cuatro libros para que los niños y niñas de 4 a 12 años descubran la música de forma divertida. Les acompaña Allegretto, un zorrito músico que crece con ellos: empieza tocando el xilófono y termina tocando el piano sobre un escenario.
+          </p>
+          <AllegrettoBooks />
+          <div class="allegretto-cta">
+            <router-link to="/piano#clases-ninos" class="btn-schedule">Clases para niños/as</router-link>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Precios Section -->
     <section class="pricing-section wow fadeInUp" id="pricing">
@@ -156,10 +176,11 @@
 import { setPageMeta } from '@/utils/seo'
 import { track } from '@/utils/track'
 import { currentMonthYear } from '@/utils/date'
+import AllegrettoBooks from '@/components/AllegrettoBooks.vue'
 
 export default {
   name: 'Home',
-  components: {},
+  components: { AllegrettoBooks },
   data() {
     return {
       pricingPlans: [],
@@ -171,7 +192,7 @@ export default {
   created() {
     setPageMeta(
       'Clases de piano y preparación a las pruebas de acceso al Conservatorio en Córdoba | Tu Aula Musical',
-      'Clases individuales de piano y preparación a las pruebas de acceso al Conservatorio en Córdoba: Enseñanzas Básicas, Profesionales y Superiores. También refuerzo de Lenguaje Musical, Bachillerato de Artes y EVAU (opción Música).'
+      'Clases individuales de piano en Córdoba para niños/as desde 4 años, jóvenes y adultos, y preparación a las pruebas de acceso al Conservatorio. También Lenguaje Musical, Bachillerato de Artes y EVAU.'
     )
   },
   mounted() {
@@ -187,7 +208,7 @@ export default {
       .catch(() => {
         // fallback mínimo por si falla la carga
         this.pricingPlans = [
-          { id: 1, link: '/piano', name: 'Piano', subtitle: 'Desde iniciación, para niños/as, jóvenes y adultos', price: 72, period: '4 horas/mes · 18€/hora', additionalOption: 'Opción con parte de la clase de Lenguaje Musical: 80€/mes (matrícula 20€)', featured: true, features: ['Matrícula 15€: incluye un libro físico propio de piano', 'Clases individuales de Piano de una hora a la semana', 'Desde nivel inicial hasta avanzado', 'Para niños/as, adolescentes o adultos'] },
+          { id: 1, link: '/piano', name: 'Piano', subtitle: 'Desde iniciación, para niños/as, jóvenes y adultos', price: 80, period: '4 horas/mes · 20€/hora', additionalOption: 'Incluye iniciación al Lenguaje Musical', featured: true, features: ['Matrícula 15€: incluye un libro físico propio de piano', 'Incluye iniciación al Lenguaje Musical', 'Clases individuales de Piano de una hora a la semana', 'Desde nivel inicial hasta avanzado', 'Para niños/as, adolescentes o adultos'] },
           { id: 2, link: '/pruebas-acceso-conservatorio-profesional', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Básicas o Profesionales)', price: 120, period: '6 horas/mes · 20€/hora', additionalOption: 'Opción 4 horas: 80€/mes', featured: false, features: ['Matrícula: 20€ (Básicas) / 35€ (Profesionales), incluye uno o dos libros físicos propios según la preparación', 'Clases individuales de la preparación elegida de una hora y media a la semana', 'Opciones: pruebas de acceso a Enseñanzas Básicas de cualquier especialidad instrumental, pruebas de acceso a 3.º de Enseñanzas Básicas de Educación Vocal o pruebas de acceso a Enseñanzas Profesionales de Canto o Piano', 'Recomendable para niños/as de 8 a 16 años', 'Acceso a la plataforma con dos libros online gratuitos (2.º y 3.er mes)'] },
           { id: 3, link: '/pruebas-acceso-conservatorio-superior', name: 'Preparación a elegir: pruebas de acceso al Conservatorio (Enseñanzas Superiores), EVAU (opción Música) o Bachillerato de Artes', price: 150, period: '6 horas/mes · 25€/hora', additionalOption: 'Opción 4 horas: 100€/mes', featured: false, badge: 'Nueva asignatura', features: ['Matrícula 35€: incluye dos libros físicos propios (Preparación a las pruebas y Escalas de Hanon), así como el repertorio elegido', 'Clases individuales de la preparación elegida de una hora y media a la semana', 'Para adolescentes y adultos', 'Clases de refuerzo de Análisis Musical de 1.º y 2.º de Enseñanzas Superiores disponibles', 'Clases de Bachillerato de Artes disponibles: Lenguaje y Práctica Musical, Análisis Musical, Coro y Técnica Vocal'] }
         ]

@@ -1,7 +1,7 @@
 {
   "name": "tu-aula-musical",
   "version": "1.0.0",
-  "description": "Tu Aula Musical - Clases de música y movimiento, piano, lenguaje musical y pruebas de acceso al Conservatorio",
+  "description": "Tu Aula Musical - Clases de piano, lenguaje musical y pruebas de acceso al Conservatorio",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

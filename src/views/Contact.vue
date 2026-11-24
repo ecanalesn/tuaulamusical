@@ -81,9 +81,14 @@
                   type="tel" 
                   id="phone" 
                   name="phone"
+                  ref="phone"
                   v-model="form.phone"
+                  @input="onPhoneInput"
                   required
-                  placeholder="Tu número de teléfono"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  maxlength="20"
+                  placeholder="Ej.: 600 123 456"
                 >
               </div>
               
@@ -131,6 +136,7 @@
 import Modal from '@/components/Modal.vue'
 import { setPageMeta } from '@/utils/seo'
 import { track } from '@/utils/track'
+import { checkPhoneInput } from '@/utils/phone'
 
 export default {
   name: 'Contact',
@@ -161,7 +167,16 @@ export default {
     trackPhoneClick() {
       track('phone_click', { origin: 'Contacto' })
     },
+    onPhoneInput(event) {
+      checkPhoneInput(event.target)
+    },
     async submitForm() {
+      const phoneInput = this.$refs.phone
+      if (!checkPhoneInput(phoneInput)) {
+        phoneInput.reportValidity()
+        return
+      }
+
       this.isSubmitting = true
       
       try {

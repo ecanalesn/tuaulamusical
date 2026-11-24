@@ -135,6 +135,15 @@
   background: var(--accent-terracotta);
 }
 
+/* Las portadas de Aprendiendo música no son una lista de texto: sin viñeta ni sangría */
+.text-content .allegretto-book {
+  padding: 0;
+}
+
+.text-content .allegretto-book::before {
+  display: none;
+}
+
 /* En listas numeradas ya se muestra el número */
 .text-content ol li::before {
   display: none;
@@ -398,4 +407,20 @@
   .hero-subtitle {
     font-size: 0.9rem !important;
   }
+}
+
+/* Destino del enlace /piano#clases-ninos: deja hueco para la cabecera fija */
+#clases-ninos {
+  scroll-margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+  #clases-ninos {
+    scroll-margin-top: 110px;
+  }
+}
+
+/* Portadas de Aprendiendo música en la página de Piano */
+.piano-allegretto-books {
+  margin: 20px 0 30px;
 }

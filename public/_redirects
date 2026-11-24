@@ -1,6 +1,9 @@
 # La página de canto ya no existe: redirigimos a la portada para no perder el tráfico indexado
 /canto   /   301
 
+# La página de Música y Movimiento ya no existe: sus alumnos/as están ahora en Piano (niños/as)
+/musica-y-movimiento   /piano   301
+
 # Bachillerato pasó de dirección en inglés a español: conservamos lo que Google ya tenga indexado
 /arts-baccalaureate-evau   /bachillerato-artes-evau   301
 

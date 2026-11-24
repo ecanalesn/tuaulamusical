@@ -16,6 +16,7 @@
                 <p>
                   En estas clases individuales de una hora a la semana puedes aprender a tocar el piano desde cero o perfeccionar tu técnica si ya tienes nivel. Avanzamos a tu ritmo y según tus objetivos.
                 </p>
+                <p><strong>Las clases incluyen iniciación al Lenguaje Musical.</strong></p>
 
                 <h3>Si partes de cero o tu nivel es inicial, trabajaremos:</h3>
                 <ul>
@@ -46,12 +47,25 @@
             </div>
           </section>
 
-          <section class="piano-detail-section piano-initiation-section">
+          <section class="piano-detail-section piano-initiation-section" id="clases-ninos">
             <div class="content-grid">
               <div class="text-content">
-                <h2>Clases de piano para niños y niñas (de 7 a 12 años)</h2>
+                <h2>Clases de piano para niños y niñas (de 4 a 12 años)</h2>
                 <p>
                   Clases individuales de una hora a la semana en las que aprenden a tocar el piano de forma progresiva, adaptadas a su edad y a su ritmo.
+                </p>
+
+                <h3>Aprendiendo música con Allegretto</h3>
+                <p>
+                  Para los más pequeños he creado <em>Aprendiendo música</em>, una colección propia de cuatro libros, uno por nivel, pensada para niños y niñas de 4 a 12 años. Les acompaña Allegretto, un zorrito músico que les guía en cada paso para que aprender música sea divertido desde el primer día.
+                </p>
+                <div class="piano-allegretto-books">
+                  <AllegrettoBooks />
+                </div>
+
+                <h3>El método de piano</h3>
+                <p>
+                  En el aprendizaje del piano sigo los métodos de John Thompson y Bastien, organizados en cinco niveles. Elijo el método más adecuado según la edad y el nivel de cada alumno/a.
                 </p>
 
                 <h3>Qué trabajan en las clases</h3>
@@ -124,12 +138,14 @@
 
 <script>
 import ClassPricing from '@/components/ClassPricing.vue'
+import AllegrettoBooks from '@/components/AllegrettoBooks.vue'
 import { setPageMeta } from '@/utils/seo'
 
 export default {
   name: 'Piano',
   components: {
-    ClassPricing
+    ClassPricing,
+    AllegrettoBooks
   },
   data() {
     return {
@@ -138,8 +154,8 @@ export default {
   },
   created() {
     setPageMeta(
-      'Clases de Piano en Córdoba | Tu Aula Musical',
-      'Clases individuales de piano en Córdoba para niños/as, adolescentes y adultos, desde nivel inicial hasta avanzado. Piano y Lenguaje Musical, una hora semanal.'
+      'Clases de Piano en Córdoba para niños/as desde 4 años y adultos | Tu Aula Musical',
+      'Clases individuales de piano en Córdoba para niños/as desde 4 años, adolescentes y adultos. Para los más pequeños, mi método Aprendiendo música con Allegretto. 80€/mes con iniciación al Lenguaje Musical.'
     )
   },
   methods: {

@@ -54,8 +54,13 @@
                 type="tel"
                 id="phone"
                 name="phone"
+                ref="phone"
                 v-model="form.phone"
-                placeholder="Tu número de teléfono"
+                @input="onPhoneInput($event, true)"
+                inputmode="tel"
+                autocomplete="tel"
+                maxlength="20"
+                placeholder="Ej.: 600 123 456"
                 required
               >
             </div>
@@ -77,8 +82,13 @@
                 type="tel"
                 id="parentPhone"
                 name="parentPhone"
+                ref="parentPhone"
                 v-model="form.parentPhone"
-                placeholder="Número de teléfono del padre/madre/tutor"
+                @input="onPhoneInput($event, false)"
+                inputmode="tel"
+                autocomplete="tel"
+                maxlength="20"
+                placeholder="Ej.: 600 123 456"
               >
             </div>
 
@@ -90,20 +100,10 @@
                     type="radio"
                     name="selectedPlan"
                     v-model="form.selectedPlan"
-                    value="Solo Piano: 72€/mes"
+                    value="Piano (incluye iniciación al Lenguaje Musical): 80€/mes"
                     required
                   >
-                  <span>Solo Piano: 72€/mes</span>
-                </label>
-                <label class="radio-option">
-                  <input
-                    type="radio"
-                    name="selectedPlan"
-                    v-model="form.selectedPlan"
-                    value="Piano + Lenguaje Musical: 80€/mes"
-                    required
-                  >
-                  <span>Piano + Lenguaje Musical: 80€/mes</span>
+                  <span>Piano (incluye iniciación al Lenguaje Musical): 80€/mes</span>
                 </label>
                 <label class="radio-option">
                   <input
@@ -216,6 +216,7 @@
 import Modal from '@/components/Modal.vue'
 import { setPageMeta } from '@/utils/seo'
 import { track } from '@/utils/track'
+import { checkPhoneInput } from '@/utils/phone'
 
 export default {
   name: 'Enrollment',
@@ -248,7 +249,21 @@ export default {
     )
   },
   methods: {
+    onPhoneInput(event, required) {
+      checkPhoneInput(event.target, { required })
+    },
     async submitForm() {
+      const phoneChecks = [
+        { input: this.$refs.phone, required: true },
+        { input: this.$refs.parentPhone, required: false }
+      ]
+      for (const { input, required } of phoneChecks) {
+        if (!checkPhoneInput(input, { required })) {
+          input.reportValidity()
+          return
+        }
+      }
+
       this.isSubmitting = true
       
       try {

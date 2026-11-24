@@ -51,6 +51,11 @@ export default {
           isOpen: false
         },
         {
+          question: '¿A partir de qué edad pueden empezar los niños y niñas?',
+          answer: 'Pueden empezar a partir de los 4 años. Para los niños y niñas de 4 a 12 años he creado Aprendiendo música, mi propio método de cuatro libros, uno por nivel: Nivel 1 (4 a 6 años), Nivel 2 (6 a 8 años), Nivel 3 (8 a 10 años) y Nivel 4 (10 a 12 años). En todos les acompaña Allegretto, un zorrito músico que es la mascota del método. En piano sigo los métodos de John Thompson y Bastien, y elijo el más adecuado según la edad y el nivel de cada alumno/a.',
+          isOpen: false
+        },
+        {
           question: '¿Puedo probar una clase?',
           answer: 'Sí, puedes probar una clase individual por 30€. Si después decides continuar, te descuento ese importe de la primera mensualidad, así que la clase de prueba te sale al mismo precio que una clase normal.',
           isOpen: false
@@ -79,7 +84,7 @@ export default {
         },
         {
           question: '¿Ofreces bonos regalo para clases?',
-          answer: 'Sí, tengo bonos regalo que incluyen una tarjeta personalizada. Puedes comprarlos para regalar clases a partir de un mes (72€, más 15€ de matrícula). Si quieres más información, escríbeme.',
+          answer: 'Sí, tengo bonos regalo que incluyen una tarjeta personalizada. Puedes comprarlos para regalar clases a partir de un mes (80€, más 15€ de matrícula). Si quieres más información, escríbeme.',
           isOpen: false
         }
       ]

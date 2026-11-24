@@ -24,6 +24,7 @@
 
       <div class="footer-bottom">
         <p>&copy; {{ currentYear }} Tu Aula Musical. Todos los derechos reservados.</p>
+        <p class="footer-rights-note">El método <em>Aprendiendo música</em> y el personaje de Allegretto son obra de Estefanía C. Queda prohibida su reproducción total o parcial sin autorización.</p>
       </div>
     </div>
   </footer>
@@ -149,6 +150,12 @@ export default {
 .footer-bottom p {
   color: #c8d9dd;
   margin: 0;
+}
+
+.footer-bottom .footer-rights-note {
+  font-size: 13px;
+  margin-top: 6px;
+  opacity: 0.85;
 }
 
 

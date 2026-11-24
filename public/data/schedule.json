@@ -1,14 +1,14 @@
 [
   {
     "day": "Lunes",
-    "hours": ["16:30", "17:30", "18:30"]
+    "hours": ["16:30", "19:15"]
   },
   {
     "day": "Martes",
-    "hours": ["19:00"]
+    "hours": ["19:15"]
   },
   {
-    "day": "Miércoles",
-    "hours": ["17:00"]
+    "day": "Jueves",
+    "hours": ["19:15"]
   }
 ]

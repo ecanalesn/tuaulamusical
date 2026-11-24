@@ -95,6 +95,10 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
+    } else if (to.hash) {
+      // Enlaces a una zona concreta (p. ej. /piano#clases-ninos).
+      // El hueco de la cabecera fija lo da scroll-margin-top en el CSS.
+      return { el: to.hash, behavior: 'smooth' }
     } else {
       // Return top: 0 to ensure instantaneous scroll to top
       return { top: 0 }
@@ -104,7 +108,7 @@ const router = createRouter({
 
 // Extra layer of certainty: scroll to top after each navigation
 router.afterEach((to) => {
-  window.scrollTo(0, 0)
+  if (!to.hash) window.scrollTo(0, 0)
   setCanonical(to)
 
   // Empuja un evento page_view al dataLayer en cada navegación (la SPA no
